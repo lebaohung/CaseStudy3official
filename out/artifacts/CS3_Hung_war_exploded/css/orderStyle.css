@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    background: #e7ecf8;
+    color: black;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    /*float: left;*/
+    margin: 0 auto; /*for test only*/
+    border: 1px solid black;
+    padding: 0px 0px 30px;
+    width: 60%;
+    color: black;
+    height: auto;
+    background: #e7ecf8;
+}
+article div,table,tr,td,h1,h3,p,span,label,section{
+    background: #e7ecf8;
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+table, tr, td {
+    border: 1px solid black;
+    width: 100%
+}
+
+.orderTab a {
+    text-decoration: none;
+    color: black;
+}
+
+.orderTab {
+    background-color: #fcac81;
+    border-top: 0;
+    border-right: 1px solid black;
+    width: 33.4%;
+    text-align: center;
+    height: 50px;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+.orderTab:hover {
+    background-color: #2fcc71;
+    color: black;
+}
+
+.tableAddress {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.timeSelection {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.address {
+    border-right: 1px solid black;
+    width: 33.4%;
+    height: 200px;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 20px;
+}
+
+
+.activeBranch h4 {
+    background: black;
+    color: white;
+}
+
+.activeBranch {
+    background: black;
+    color: white;
+}
+
+.activeTime {
+    background: black;
+    color: white;
+}
+
+.activeTime time {
+    background: black;
+    color: white;
+}
+
+.button {
+    text-align: center;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button1 {
+    position: relative;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    background-color: #fcac81;
+    color: black;
+    border: 2px solid #f44336;
+    font-size: 20px}
+
+.button1:hover {
+    background-color: #2fcc71;
+    color: white;
+}
+
+.button1:active {
+    background-color: #3cf436;
+}
+
+.notEmpty {
+    color: red;
+}
+
+.infoTd {
+    width: 33.4%;
+    font-size: 26px;
+    text-align: center;
+}
+
+.infoTable {
+    margin: 0 auto;
+    width: 80%;
+}
+
+td input {
+    width: 100px;
+}
+
+.col {
+    width: 32.2%;
+    display: block;
+    float: left;
+    height: 150px;
+}
+
+.colTime {
+    width: 30%;
+    font-weight: bold;
+    height: 80px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+.form .plan input, .form .payment-plan input, .form .payment-type input {
+    display: none;
+}
+
+.form label {
+    margin:0% 0% 1% 1%;
+    padding-top: 1%;
+    position: relative;
+    color: black;
+    background-color: #fcac81;
+    font-size: 40px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form label h3,h5{
+    background-color: #fcac81;
+}
+
+.form .plan input:checked + label h3, .form input:checked + label h5, .form input:checked + label, .form input:checked{
+    background-color: #2fcc71;
+}
+
+.form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type
+input:checked + label:after {
+    content: "\2713";
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    background-color: #2fcc71;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}

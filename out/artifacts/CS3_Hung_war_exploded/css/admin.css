@@ -1,0 +1,12 @@
+.nav-item {
+    color: white;
+}
+#contex {
+ margin: 10px auto;
+}
+
+#all {
+    height: 500px;
+    width: 100%;
+    background-image: url("https://daubepgiadinh.vn/wp-content/uploads/2018/09/lau-thap-cam.jpg");
+}

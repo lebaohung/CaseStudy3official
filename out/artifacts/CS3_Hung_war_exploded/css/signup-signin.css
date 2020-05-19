@@ -1,0 +1,104 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: white !important;
+    justify-content: center;
+}
+.user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: 100px;
+    margin-bottom: auto;
+    background: orange;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    text-align: center;
+}
+.brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #60a3bc;
+    padding: 10px;
+    text-align: center;
+    margin-left: 78px;
+}
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.form_container {
+    margin-top: 100px;
+}
+
+/*#c0392b*/
+.login_btn {
+    width: 100%;
+    background: forestgreen !important;
+    color: white !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.login_container {
+    padding: 0 2rem;
+}
+.input-group-text {
+    background: #c0392b !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.user_box{
+    margin-left: 40px;
+    margin-top: 0;
+    width: 250px;
+}
+
+.pass_box{
+    margin-left: 40px;
+    margin-top: 15px;
+    width: 250px;
+}
+
+.btn_box{
+    margin-top: 20px;
+}
+
+.logo_box{
+    text-align: center;
+}
+
+.login_form{
+    text-align: center;
+    margin-top: -20px;
+}
+
+.signup_box{
+    margin-top: 25px;
+}
+
+.message{
+    margin-bottom: -80px;
+}
