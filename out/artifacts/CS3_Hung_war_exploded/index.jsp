@@ -46,7 +46,7 @@
         <li><a href="signup-signin.jsp">Đăng nhập - Đăng ký</a></li>
         <li><a href="#section-menu">Menu</a></li>
         <li><a href="#section-about">Hệ thống nhà hàng</a></li>
-        <li><a href="admin.jsp">Admin tạm thời</a></li>
+        <li><a href="admin.jsp">Adminn tạm thời</a></li>
       </ul>
     </div>
   </nav>
@@ -95,9 +95,24 @@
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-12 col-lg-8 section-heading">
-          <h2 class="heading mb-5">Hệ thống nhà hàng Lẩu P</h2>
-          <p>Nhà hàng Lẩu Phan tự hào là thương hiệu buffet bò Úc lớn nhất Hà Nội, nhà hàng sở hữu không gian đường phố nhưng vẫn mang nét lịch sự, trẻ trung phù hợp với nhiều lứa tuổi. Thực khách sẽ rất hài lòng với menu lẩu gồm 4 vị đặc trưng tại Phan: Lẩu kim chi cay nức mũi, lẩu thái, lẩu dấm táo, lẩu chua sấu mang đậm nét Hà Thành xưa.</p>
+          <h2 class="heading mb-5">Hệ thống nhà hàng Lẩu Pink</h2>
+          <p>Nhà hàng Lẩu Pink tự hào là thương hiệu buffet bò Úc lớn nhất Hà Nội, nhà hàng sở hữu không gian đường phố nhưng vẫn mang nét lịch sự, trẻ trung phù hợp với nhiều lứa tuổi. Thực khách sẽ rất hài lòng với menu lẩu gồm 4 vị đặc trưng tại Pink: Lẩu kim chi cay nức mũi, lẩu thái, lẩu dấm táo, lẩu chua sấu mang đậm nét Hà Thành xưa.</p>
           <p> Đặc biệt chính là nhà hàng có hai set buffet 99k và 129k tương đương với 8 và 17 món ăn vô cùng hấp dẫn, những đĩa bò Úc được nhập khẩu 100%, đảm bảo từ chất lượng đến vệ sinh thực phẩm cho thực khách.</p>
+          <p><span style="font-weight: bold">
+            Lẩu Pink Moncity <br>
+          </span>
+            TT02 MonCity, ngõ 4 Hàm Nghi, Mỹ Đình 1, Cầu Giấy, Hà Nội
+          </p>
+          <p><span style="font-weight: bold">
+            Lẩu Pink Hải Phòng <br>
+          </span>
+            Số 21 Lô 8A4 Đường Lê Hồng Phong
+          </p>
+          <p><span style="font-weight: bold">
+           Lẩu Pink Phùng Khoang <br>
+          </span>
+            TT02 MonCity, ngõ 4 Hàm Nghi, Mỹ Đình 1, Cầu Giấy, Hà Nội
+          </p>
         </div>
       </div>
     </div>
@@ -182,7 +197,7 @@
         <div class="col-md-4 mb-5">
           <div class="footer-widget">
 
-            <p><a href="#" class="btn btn-primary btn-outline-primary">Hệ thống nhà hàng</a></p>
+            <p><a href="#section-about" class="btn btn-primary btn-outline-primary">Hệ thống nhà hàng</a></p>
           </div>
         </div>
         <div class="col-md-4 mb-5">
@@ -193,10 +208,12 @@
 
         <div class="col-md-4">
           <div class="footer-widget">
-            <h3 class="mb-4">Theo dõi chúng tôi </h3>
+            <h3 class="mb-4">Kết nối với chúng tôi </h3>
             <ul class="list-unstyled social">
-              <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-              <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="http://facebook.com" target="_blank"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="https://instagram.com" target="_blank"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="tel: 0777777777"><h6>Tel: 0777777777</h6></a></li>
+              <li><a href="mailto: contact@laupink.com"><h6>Email: contact@laupink.com</h6></a></li>
             </ul>
           </div>
         </div>
