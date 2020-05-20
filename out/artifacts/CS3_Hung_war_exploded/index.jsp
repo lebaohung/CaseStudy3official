@@ -9,7 +9,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Lẩu Pink</title>
+  <title>Lẩu Phan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -57,6 +57,11 @@
 
       </div>
       <div class="col-2 col-md-6 text-center site-logo-wrap">
+        <a href="index.jsp" class="site-logo"
+           style=" border: 2px solid white; border-radius: 3px;
+               color: white; ">
+          Phan
+        </a>
       </div>
       <div class="col-5 col-md-3 text-right menu-burger-wrap">
         <a href="#" class="site-nav-toggle js-site-nav-toggle"><i></i></a>
@@ -95,9 +100,24 @@
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-12 col-lg-8 section-heading">
-          <h2 class="heading mb-5">Hệ thống nhà hàng Lẩu P</h2>
+          <h2 class="heading mb-5">Hệ thống nhà hàng Lẩu Phan</h2>
           <p>Nhà hàng Lẩu Phan tự hào là thương hiệu buffet bò Úc lớn nhất Hà Nội, nhà hàng sở hữu không gian đường phố nhưng vẫn mang nét lịch sự, trẻ trung phù hợp với nhiều lứa tuổi. Thực khách sẽ rất hài lòng với menu lẩu gồm 4 vị đặc trưng tại Phan: Lẩu kim chi cay nức mũi, lẩu thái, lẩu dấm táo, lẩu chua sấu mang đậm nét Hà Thành xưa.</p>
           <p> Đặc biệt chính là nhà hàng có hai set buffet 99k và 129k tương đương với 8 và 17 món ăn vô cùng hấp dẫn, những đĩa bò Úc được nhập khẩu 100%, đảm bảo từ chất lượng đến vệ sinh thực phẩm cho thực khách.</p>
+          <p><span style="font-weight: bold">
+            Lẩu Phan Moncity <br>
+          </span>
+            TT02 MonCity, ngõ 4 Hàm Nghi, Mỹ Đình 1, Cầu Giấy, Hà Nội
+          </p>
+          <p><span style="font-weight: bold">
+            Lẩu Phan Hải Phòng <br>
+          </span>
+            Số 21 Lô 8A4 Đường Lê Hồng Phong
+          </p>
+          <p><span style="font-weight: bold">
+           Lẩu Phan Phùng Khoang <br>
+          </span>
+            TT02 MonCity, ngõ 4 Hàm Nghi, Mỹ Đình 1, Cầu Giấy, Hà Nội
+          </p>
         </div>
       </div>
     </div>
@@ -182,7 +202,7 @@
         <div class="col-md-4 mb-5">
           <div class="footer-widget">
 
-            <p><a href="#" class="btn btn-primary btn-outline-primary">Hệ thống nhà hàng</a></p>
+            <p><a href="#section-about" class="btn btn-primary btn-outline-primary">Hệ thống nhà hàng</a></p>
           </div>
         </div>
         <div class="col-md-4 mb-5">
@@ -193,10 +213,12 @@
 
         <div class="col-md-4">
           <div class="footer-widget">
-            <h3 class="mb-4">Theo dõi chúng tôi </h3>
+            <h3 class="mb-4">Kết nối với chúng tôi </h3>
             <ul class="list-unstyled social">
-              <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-              <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="http://facebook.com" target="_blank"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="https://instagram.com" target="_blank"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="tel: 0777777777"><h6>Tel: 0777777777</h6></a></li>
+              <li><a href="mailto: contact@lauPhan.com"><h6>Email: contact@lauphan.com</h6></a></li>
             </ul>
           </div>
         </div>
