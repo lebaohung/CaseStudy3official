@@ -28,7 +28,7 @@ background-size: cover;
 <div id="confirmContent">
     <h2 style="text-align: center;margin-bottom: 50px;margin-top: 10px;  background-color: #fcac81;
 ">XÁC NHẬN THÔNG TIN ĐẶT BÀN</h2>
-    <form action="servlet.java" onsubmit="openForm()">
+    <form action="/orderServlet?action=orderInfo" onsubmit="openForm()">
         <div class="row">
             <div class="col-40">
                 <label for="nameText" style="padding-left: 10px">Tên khách hàng </label>
@@ -97,19 +97,19 @@ background-size: cover;
         </div>
     </form>
 </div>
-        <div id="confirmPopUp">
-            <h2 style="text-align: center;margin-bottom: 50px;margin-top: 10px;  background-color: #fcac81;
-">BẠN ĐÃ ĐẶT BÀN THÀNH CÔNG</h2>
-            <p style="background-color: #fcac81"> Khách hàng: </p>
-            <p style="background-color: #fcac81"> Mã khách: </p>
-            <p style="background-color: #fcac81">Địa chỉ chi nhánh: </p>
-            <p style="background-color: #fcac81">Trong trường hợp quý khách muốn hủy đơn hoặc chuyển giờ xin vui lòng liên hệ với tổng đài hỗ trợ
-                muộn nhất 15 phút trước giờ ăn. </p>
-            <div class="row">
-                <a href="index.jsp">
-                <button  style="float: left;margin-bottom: 20px;" class="button button1">OK</button></a>
-            </div>
-        </div>
+<%--        <div id="confirmPopUp">--%>
+<%--            <h2 style="text-align: center;margin-bottom: 50px;margin-top: 10px;  background-color: #fcac81;--%>
+<%--">BẠN ĐÃ ĐẶT BÀN THÀNH CÔNG</h2>--%>
+<%--            <p style="background-color: #fcac81"> Khách hàng: </p>--%>
+<%--            <p style="background-color: #fcac81"> Mã khách: </p>--%>
+<%--            <p style="background-color: #fcac81">Địa chỉ chi nhánh: </p>--%>
+<%--            <p style="background-color: #fcac81">Trong trường hợp quý khách muốn hủy đơn hoặc chuyển giờ xin vui lòng liên hệ với tổng đài hỗ trợ--%>
+<%--                muộn nhất 15 phút trước giờ ăn. </p>--%>
+<%--            <div class="row">--%>
+<%--                <a href="index.jsp">--%>
+<%--                <button  style="float: left;margin-bottom: 20px;" class="button button1">OK</button></a>--%>
+<%--            </div>--%>
+<%--        </div>--%>
 
     <script>
                 function myFunction() {
@@ -138,9 +138,9 @@ background-size: cover;
                 }
 
                 function openForm() {
-                    alert("Đặt hàng thành công")
-                    document.getElementById("confirmContent").style.display = "none";
-                    document.getElementById("confirmPopUp").style.display = "block";
+                    alert("Đặt bàn thành công")
+                    // document.getElementById("confirmContent").style.display = "none";
+                    // document.getElementById("confirmPopUp").style.display = "block";
                 }
             </script>
 
