@@ -79,6 +79,18 @@
     height: auto;
     background-color: #fcac81;
 }
+#confirmPopUp{
+    display: none;
+    position: fixed;
+    margin-top: 10%;
+    margin-left: 30%;
+    border: 1px solid black;
+    padding: 0px;
+    width: 40%;
+    color: black;
+    height: auto;
+    background-color: #fcac81;
+}
 .body,.div{
     background-color: #fcac81;
 }
