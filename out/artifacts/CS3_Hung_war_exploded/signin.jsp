@@ -20,7 +20,7 @@
     <div class="d-flex logo_box">
         <div class="brand_logo_container">
             <a href="index.jsp">
-                <img src="images/lauphan_logo.png" href="index.jsp" class="brand_logo" alt="Logo">
+                <img src="images/lauphan_logo.png"  class="brand_logo" alt="Logo">
             </a>
         </div>
     </div>

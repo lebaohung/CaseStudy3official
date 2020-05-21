@@ -1,0 +1,14 @@
+.table_header {
+    text-align: center;
+    font-size: 21px;
+}
+
+.admin_name{
+    float: left;
+    padding: 15px 30px;
+}
+
+.sort_menu{
+    float: right;
+    padding: 25px 60px;
+}
