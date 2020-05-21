@@ -155,13 +155,10 @@
                 <div class="text order-1 mb-3">
                   <img src="" alt="Image">
                   <h3><a href="#">Set 99k</a></h3>
-                  <p>Chỉ với 99k bạn được đánh chén một bữa lẩu no nê, ngập mặt Bò Úc, và tất nhiên, không chỉ ngập mặt Bò Úc đâu, bạn sẽ được đắm chìm trong các món ăn kèm như:
-                    - Bánh bao chiên
-                    - Váng đậu
-                    - Quẩy
-                    - Rau
-                    - Đậu hũ
-                    - Gáy heo Hàn Quốc
+                  <p>Chỉ với 99k bạn được đánh chén một bữa lẩu no nê, ngập mặt Bò Úc,
+                    và tất nhiên, không chỉ ngập mặt Bò Úc đâu,
+                    bạn sẽ được đắm chìm trong các món ăn kèm như:
+                    Bánh bao chiên, Váng đậu, Quẩy, Rau, Đậu hũ, Gáy heo Hàn Quốc
                     Và đương nhiên, không thể thiếu trong các bữa lẩu đó là mì tôm</p>
                 </div>
                 <div class="price order-2">
