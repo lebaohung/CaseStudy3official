@@ -20,6 +20,7 @@
 
 <%--<div class="logo_box" >--%>
 <%--    <div class="brand_logo_container">--%>
+
         <a href="orderPage.jsp">
             <img src="images/lauphan_logo.png" alt="Logo" class="brand_logo">
         </a>
