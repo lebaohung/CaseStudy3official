@@ -3,7 +3,7 @@ package model;
 public class MenuItem {
     protected int id;
     protected String name;
-    protected float price;
+    protected String price;
     protected String descr;
     protected String img;
     protected String kind;
@@ -11,7 +11,7 @@ public class MenuItem {
     public MenuItem() {
     }
 
-    public MenuItem(int id, String name, float price, String descr, String img, String kind) {
+    public MenuItem(int id, String name, String price, String descr, String img, String kind) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -36,11 +36,11 @@ public class MenuItem {
         this.name = name;
     }
 
-    public float getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

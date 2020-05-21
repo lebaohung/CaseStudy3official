@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.Random" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="java.text.NumberFormat" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -57,7 +61,7 @@
 
       </div>
       <div class="col-2 col-md-6 text-center site-logo-wrap">
-        <a href="index.jsp" class="site-logo"
+        <a href="" class="site-logo"
            style=" border: 2px solid white; border-radius: 3px;
                color: white; ">
           Phan
@@ -150,39 +154,64 @@
           </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
-              <div class="d-block d-md-flex menu-food-item">
-
-                <div class="text order-1 mb-3">
-                  <img src="" alt="Image">
-                  <h3><a href="#">Set 99k</a></h3>
-                  <p>Chỉ với 99k bạn được đánh chén một bữa lẩu no nê, ngập mặt Bò Úc,
-                    và tất nhiên, không chỉ ngập mặt Bò Úc đâu,
-                    bạn sẽ được đắm chìm trong các món ăn kèm như:
-                    Bánh bao chiên, Váng đậu, Quẩy, Rau, Đậu hũ, Gáy heo Hàn Quốc
-                    Và đương nhiên, không thể thiếu trong các bữa lẩu đó là mì tôm</p>
+                <c:forEach var="item" items="${itemList}">
+                  <c:if test="${item.getKind() == 'combo'}">
+                    <div class="d-block d-md-flex menu-food-item">
+                        <div class="text order-1 mb-3">
+                            <img src= "<c:out value="${item.getImg()}"/>" alt= "<c:out value="${item.getName()}"/>" >
+                            <h3><a href="#"><c:out value="${item.getName()}"/></a></h3>
+                            <p>
+                                <c:out value="${item.getDescr()}"/>
+                            </p>
+                        </div>
+                        <div class="price order-2">
+                            <strong>
+                                <c:out value="${item.getPrice()}"/>
+                            </strong>
+                        </div>
+                    </div>
+                  </c:if>
+                </c:forEach>
+            </div>
+            <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
+              <c:forEach var="item" items="${itemList}">
+                <c:if test="${item.getKind() == 'food'}">
+                <div class="d-block d-md-flex menu-food-item">
+                  <div class="text order-1 mb-3">
+                    <img src= "<c:out value="${item.getImg()}"/>" alt= "<c:out value="${item.getName()}"/>" >
+                    <h3><a href="#"><c:out value="${item.getName()}"/></a></h3>
+                    <p>
+                      <c:out value="${item.getDescr()}"/>
+                    </p>
+                  </div>
+                  <div class="price order-2">
+                    <strong>
+                      <c:out value="${item.getPrice()}"/>
+                    </strong>
+                  </div>
                 </div>
-                <div class="price order-2">
-                  <strong>99.000đ</strong>
+                </c:if>
+              </c:forEach>
+            </div>
+            <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
+              <c:forEach var="item" items="${itemList}">
+                <c:if test="${item.getKind() == 'drink'}">
+                <div class="d-block d-md-flex menu-food-item">
+                  <div class="text order-1 mb-3">
+                    <img src= "<c:out value="${item.getImg()}"/>" alt= "<c:out value="${item.getName()}"/>" >
+                    <h3><a href="#"><c:out value="${item.getName()}"/></a></h3>
+                    <p>
+                      <c:out value="${item.getDescr()}"/>
+                    </p>
+                  </div>
+                  <div class="price order-2">
+                    <strong>
+                      <c:out value="${item.getPrice()}"/>
+                    </strong>
+                  </div>
                 </div>
-              </div> <!-- .menu-food-item -->
-
-              <div class="d-block d-md-flex menu-food-item">
-                <div class="text order-1 mb-3">
-                  <img src="images/img_2.jpg" alt="Image">
-                  <h3><a href="#">Set 129k</a></h3>
-                  <p>Chính thức ngập mặt Thịt Bò khi set 129k bao gồm 8 món cũ trong set 99k và update thêm 8 món mới cực kì hấp dẫn:
-                    - “Bò Popcorn” rất ngon lại rất lạ
-                    - “Thịt bắp bò, Gầu Bò, Gân bò” cực kì thơm ngon khó cưỡng
-                    - “Quẩy hải sản sốt trứng", ăn miễn chê
-                    - “Salad rong biển trứng của" cực đỉnh
-                    - “Khoai Lang Kén" không kém phần hấp dẫn
-                    Và không thể thiếu HOT TREND của mùa hè đó là “Chè Dừa Dầm”</p>
-                </div>
-                <div class="price order-2">
-                  <strong>129.000đ</strong>
-                </div>
-              </div> <!-- .menu-food-item -->
-
+                </c:if>
+              </c:forEach>
             </div>
           </div>
         </div>
