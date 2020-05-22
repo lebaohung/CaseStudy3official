@@ -46,7 +46,7 @@
         <li><a href="signin.jsp">Đăng nhập - Đăng ký</a></li>
         <li><a href="#section-menu">Menu</a></li>
         <li><a href="#section-about">Hệ thống nhà hàng</a></li>
-        <li><a href="admin.jsp">Adminn tạm thời</a></li>
+        <li><a href="admin.jsp">Admin tạm thời</a></li>
       </ul>
     </div>
   </nav>
