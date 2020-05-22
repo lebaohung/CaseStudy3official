@@ -102,7 +102,7 @@
               <h4 class="ftco-46-subheading">Menu đa dạng</h4>
 <%--              <h3 class="ftco-46-heading">Beef Empanadas</h3>--%>
               <p class="mb-5">Đa dạng Buffet từ 99k-199k bao gồm thịt Bò Úc, Hải Sản <br><br><br></p>
-              <p><a href="https://www.facebook.com/nhubinh.nguyen.739978" target="_blank" class="btn-link">Xem thêm <span class="ion-android-arrow-forward"></span></a></p>
+              <p><a href="https://www.instagram.com/_sunicorn/" target="_blank" class="btn-link">Xem thêm <span class="ion-android-arrow-forward"></span></a></p>
             </div>
             <div class="ftco-46-image" style="background-image: url(/images/subcover2.jpg);"></div>
           </div>
