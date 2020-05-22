@@ -8,8 +8,9 @@
           <element id="module-output" name="CS3-Hung" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.49" />
           <element id="library" level="project" name="javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
           <element id="library" level="project" name="mysql:mysql-connector-java:8.0.15" />
         </element>
       </element>
