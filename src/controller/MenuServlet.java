@@ -1,6 +1,6 @@
 package controller;
 
-import DAO.MenuItemDAO;
+import dao.MenuItemDAO;
 import model.MenuItem;
 
 import javax.servlet.RequestDispatcher;

@@ -92,7 +92,39 @@
           <h3 class=" mb-5">Ăn đến lúc phải bò thì thôi</h3>
         </div>
       </div>
-      !--          </div>-->
+      <div class="row">
+
+        <div class="ftco-46">
+          <div class="ftco-46-row d-flex flex-column flex-lg-row">
+            <div class="ftco-46-image" style="background-image: url(/images/lauphan_logo.png);"></div>
+            <div class="ftco-46-text ftco-46-arrow-left">
+              <h4 class="ftco-46-subheading">Vegies</h4>
+              <h3 class="ftco-46-heading">Beef Empanadas</h3>
+              <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <p><a href="#" class="btn-link">Learn More <span class="ion-android-arrow-forward"></span></a></p>
+            </div>
+            <div class="ftco-46-image" style="background-image: url(/images/lauphan_logo.png);"></div>
+          </div>
+
+          <div class="ftco-46-row d-flex flex-column flex-lg-row">
+            <div class="ftco-46-text ftco-46-arrow-right">
+              <h4 class="ftco-46-subheading">Food</h4>
+              <h3 class="ftco-46-heading">Buttermilk Chicken Jibaritos</h3>
+              <p class="mb-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <p><a href="#" class="btn-link">Learn More <span class="ion-android-arrow-forward"></span></a></p>
+            </div>
+            <div class="ftco-46-image" style="background-image: url(/images/lauphan_logo.png);"></div>
+            <div class="ftco-46-text ftco-46-arrow-up">
+              <h4 class="ftco-46-subheading">Food</h4>
+              <h3 class="ftco-46-heading">Chicken Chimichurri Croquettes</h3>
+              <p class="mb-5">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+              <p><a href="#" class="btn-link">Learn More <span class="ion-android-arrow-forward"></span></a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>-->
   </div> <!-- .section -->
 
   <div class="section pb-3 bg-white" id="section-about" data-aos="fade-up">
