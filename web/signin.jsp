@@ -19,7 +19,9 @@
 <div class="user_card">
     <div class="d-flex logo_box">
         <div class="brand_logo_container">
-            <img src="images/lauphan_logo.png" class="brand_logo" alt="Logo">
+            <a href="index.jsp">
+                <img src="images/lauphan_logo.png"  class="brand_logo" alt="Logo">
+            </a>
         </div>
     </div>
     <div class="message">
@@ -31,7 +33,8 @@
                 <div class="input-group-append">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                 </div>
-                <input type="text" name="" class="form-control input_user" value="" placeholder="Tài khoản">
+                <input type="text" name="" class="form-control input_user" value="" placeholder="Tài khoản"
+                       minlength="4" maxlength="30">
             </div>
             <div class="input-group mb-2 pass_box">
                 <div class="input-group-append">
@@ -40,7 +43,7 @@
                 <input type="password" name="" class="form-control input_pass" value="" placeholder="Mật khẩu">
             </div>
             <div class="d-flex justify-content-center mt-3 login_container btn_box">
-                <button type="button" name="button" class="btn btn-success">Đăng nhập</button>
+                <button type="submit" name="button" class="btn btn-success">Đăng nhập</button>
             </div>
         </form>
     </div>

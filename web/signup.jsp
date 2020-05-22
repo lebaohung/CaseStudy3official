@@ -17,7 +17,10 @@
 <body style="background-image: url(images/cover.jpg)">
 <div class="container">
     <div class="logo_brand">
-        <img src="images/lauphan_logo.png" id="logo" height="120" width="120"/></div>
+        <a href="index.jsp">
+            <img src="images/lauphan_logo.png" id="logo" height="120" width="120"/>
+        </a>
+    </div>
     <div class="card-header">
         <h2>Register</h2>
     </div>
