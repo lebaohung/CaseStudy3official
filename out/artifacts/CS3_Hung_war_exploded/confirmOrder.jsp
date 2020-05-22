@@ -25,7 +25,6 @@ background-size: cover;
     <%--    </div>--%>
 </div>
 
-
 <div id="confirmContent">
     <h2 style="text-align: center;margin-bottom: 50px;margin-top: 10px;  background-color: #fcac81;
 ">XÁC NHẬN THÔNG TIN ĐẶT BÀN</h2>
