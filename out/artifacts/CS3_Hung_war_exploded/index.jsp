@@ -86,6 +86,7 @@
     </div> <!-- .cover_1 -->
 
     <div class="section"  data-aos="fade-up">
+      <div class="container">
       <div class="row section-heading justify-content-center mb-5">
         <div class="col-md-8 text-center">
           <h2 class="heading mb-3">Buffet Bò Úc</h2>
@@ -96,29 +97,29 @@
 
         <div class="ftco-46">
           <div class="ftco-46-row d-flex flex-column flex-lg-row">
-            <div class="ftco-46-image" style="background-image: url(/images/lauphan_logo.png);"></div>
+            <div class="ftco-46-image" style="background-image: url(/images/subcover1.jpg);"></div>
             <div class="ftco-46-text ftco-46-arrow-left">
-              <h4 class="ftco-46-subheading">Vegies</h4>
-              <h3 class="ftco-46-heading">Beef Empanadas</h3>
-              <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-              <p><a href="#" class="btn-link">Learn More <span class="ion-android-arrow-forward"></span></a></p>
+              <h4 class="ftco-46-subheading">Menu đa dạng</h4>
+<%--              <h3 class="ftco-46-heading">Beef Empanadas</h3>--%>
+              <p class="mb-5">Đa dạng Buffet từ 99k-199k bao gồm thịt Bò Úc, Hải Sản <br><br><br></p>
+              <p><a href="https://www.instagram.com/_sunicorn/" target="_blank" class="btn-link">Xem thêm <span class="ion-android-arrow-forward"></span></a></p>
             </div>
-            <div class="ftco-46-image" style="background-image: url(/images/lauphan_logo.png);"></div>
+            <div class="ftco-46-image" style="background-image: url(/images/subcover2.jpg);"></div>
           </div>
 
           <div class="ftco-46-row d-flex flex-column flex-lg-row">
             <div class="ftco-46-text ftco-46-arrow-right">
-              <h4 class="ftco-46-subheading">Food</h4>
-              <h3 class="ftco-46-heading">Buttermilk Chicken Jibaritos</h3>
-              <p class="mb-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn-link">Learn More <span class="ion-android-arrow-forward"></span></a></p>
+              <h4 class="ftco-46-subheading">Phong phú món ăn đi kèm</h4>
+<%--              <h3 class="ftco-46-heading">Buttermilk Chicken Jibaritos</h3>--%>
+              <p class="mb-5">Rất nhiều món ăn đi kèm và thức uống đầy ắp <br><br><br></p>
+              <p><a href="https://www.instagram.com/withdanh/" target="_blank" class="btn-link">Xem thêm <span class="ion-android-arrow-forward"></span></a></p>
             </div>
-            <div class="ftco-46-image" style="background-image: url(/images/lauphan_logo.png);"></div>
+            <div class="ftco-46-image" style="background-image: url(/images/subcover3.jpg);"></div>
             <div class="ftco-46-text ftco-46-arrow-up">
-              <h4 class="ftco-46-subheading">Food</h4>
-              <h3 class="ftco-46-heading">Chicken Chimichurri Croquettes</h3>
-              <p class="mb-5">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
-              <p><a href="#" class="btn-link">Learn More <span class="ion-android-arrow-forward"></span></a></p>
+              <h4 class="ftco-46-subheading">Bò Úc nhập khẩu</h4>
+<%--              <h3 class="ftco-46-heading">Chicken Chimichurri Croquettes</h3>--%>
+              <p class="mb-5">Tất cả thực phẩm tại lẩu Phan đều được kiểm soát và đảm bảo an toàn thực phẩm  <br><br><br></p>
+              <p><a href="https://www.instagram.com/nguyendiem.2k_/" target="_blank" class="btn-link">Xem thêm <span class="ion-android-arrow-forward"></span></a></p>
             </div>
           </div>
         </div>
