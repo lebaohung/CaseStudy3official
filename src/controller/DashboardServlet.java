@@ -26,5 +26,6 @@ public class DashboardServlet extends HttpServlet {
     public void logOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         request.getSession().invalidate();
         response.sendRedirect(request.getContextPath() + "index.jsp");
+
     }
 }

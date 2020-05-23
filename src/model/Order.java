@@ -1,7 +1,6 @@
 package model;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Order {
@@ -9,19 +8,18 @@ public class Order {
     private int guestId;
     private int branchId;
     private String date;
-    private int timeId;//order time
+    private String time;//order time
     private int guestNum;
-
     public Order() {
     }
 
 
-    public Order(int orderId, int guestId, int branchId, String date, int timeId, int guestNum) {
+    public Order(int orderId, int guestId, int branchId, String date, String timeId, int guestNum) {
         this.orderId = orderId;
         this.guestId = guestId;
         this.branchId = branchId;
         this.date = date;
-        this.timeId = timeId;
+        this.time = timeId;
         this.guestNum = guestNum;
     }
 
@@ -50,23 +48,21 @@ public class Order {
     }
 
     public String getDate() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate today = LocalDate.now();
-        String timeString = today.format(formatter);
-        System.out.println(timeString);
         return date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate today = LocalDate.now();
+        this.date = today.format(formatter);
     }
 
-    public int getTimeId() {
-        return timeId;
+    public String getTime() {
+        return time;
     }
 
-    public void setTimeId(int timeId) {
-        this.timeId = timeId;
+    public void setTime(String time) {
+        this.time = time +":00:00";
     }
 
     public int getGuestNum() {

@@ -4,6 +4,7 @@ import dao.GuestOrderDAO;
 import model.Guest;
 import model.Order;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,27 +15,27 @@ import java.util.regex.Pattern;
 
 @WebServlet(name = "OrderServlet", urlPatterns = "/orderServlet")
 public class OrderServlet extends HttpServlet {
-
     private final String NAME_REGEX = "[aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈ"
             + "ĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴ"
             + "zZ\\s]+";
     private final String PHONE_REGEX = "[0-9]{9,12}";
-    private final String QUANTITY_REGEX = "[0-9]{1,20}";
+    private final String QUANTITY_REGEX = "[0-9]{1,3}";
     private final String BRANCH_REGEX = "[aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈ"
             + "ĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴ"
             + "zZ\\s]+";
-//    private final String DATE_REGEX = "";
-//    private final String TIME_REGEX = "";
+    private final String DATE_REGEX = "[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}";
+    private final String TIME_REGEX = "[0-9]{2}";
 private GuestOrderDAO guestOrderDAO;
     public void init() {
         guestOrderDAO = new GuestOrderDAO();
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String action = request.getParameter("action");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         String action = request.getParameter("action");
 
         // get customer name
@@ -45,10 +46,10 @@ private GuestOrderDAO guestOrderDAO;
         String quantity = request.getParameter("quantity");
         //get branch name
         String branchRadio = request.getParameter("branchRadio");
-        //get order date
-        String dateOrder = request.getParameter("dateOrder");
         //get order time
         String timeRadio = request.getParameter("timeRadio");
+        //get order date
+//        String dateOrder = request.getParameter("dateOrder");
 
         if (checkCustomerInfo(guestName, phoneNum)) {
             Guest guest = new Guest(guestName, phoneNum);
@@ -59,21 +60,39 @@ private GuestOrderDAO guestOrderDAO;
             System.out.println("Data is Validate!");
         }
 
-        if (checkOrderInfo(quantity, branchRadio, dateOrder, timeRadio)) {
+        if (checkOrderInfo(quantity, branchRadio, timeRadio)) {
             Order order = new Order();
             int guestNum = Integer.parseInt(quantity);
-            int orderTime = Integer.parseInt(timeRadio);
-
             order.setGuestNum(guestNum);
-            order.setTimeId(orderTime);
-            order.setDate(dateOrder);
+            order.setTime(timeRadio);
+            order.setDate();
             order.setBranchId(chooseBranchId(branchRadio));
             order.setGuestId(getGuestByPhone(phoneNum));
-
-            guestOrderDAO.insertOrder(order);
-
+            if (guestOrderDAO.insertOrder(order)){
+                confirmOrderDispatcher(request, response, guestName, quantity, order);
+            }else {
+                validateOrderDispatcher(request, response);
+                return;
+            }
         }
+    }
 
+    private void validateOrderDispatcher(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        System.out.println("fail");
+        String orderFail="fail";
+        request.setAttribute("orderStt",orderFail);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("validateOrder.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    private void confirmOrderDispatcher(HttpServletRequest request, HttpServletResponse response, String guestName,
+                                        String quantity, Order order) throws ServletException, IOException {
+        System.out.println("success");
+        request.setAttribute("order", order);
+        request.setAttribute("guestName",guestName);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("confirmOrder.jsp");
+        dispatcher.forward(request, response);
     }
 
     private int getGuestByPhone(String phoneNum) {
@@ -102,61 +121,31 @@ private GuestOrderDAO guestOrderDAO;
         return id;
     }
 
-    private boolean checkOrderInfo(String quantity, String branchRadio, String dateOrder, String timeRadio) {
+    private boolean checkOrderInfo(String quantity, String branchRadio, String timeRadio) {
         if (!Pattern.matches(QUANTITY_REGEX, quantity)) {
-            try {
-                throw new Exception();
-            } catch (Exception e) {
                 System.out.println("quantity is Validate!");
-                return false;
-            }
         }
 
         if (!Pattern.matches(BRANCH_REGEX, branchRadio)) {
-            try {
-                throw new Exception();
-            } catch (Exception e) {
                 System.out.println("branchRadio is Validate!");
-                return false;
-            }
         }
-//        if (!Pattern.matches(DATE_REGEX, dateOrder)){
-//            try {
-//                throw new Exception();
-//            } catch (Exception e) {
-//                System.out.println("dateOrder is Validate!");
-//                return false;
-//            }
-//        }
-//        if (!Pattern.matches(TIME_REGEX, timeRadio)){
-//            try {
-//                throw new Exception();
-//            } catch (Exception e) {
-//                System.out.println("timeRadio is Validate!");
-//                return false;
-//            }
-//        }
+
+        if (!Pattern.matches(TIME_REGEX, timeRadio)){
+                System.out.println("timeRadio is Validate!");
+        }
         return true;
     }
 
     private boolean checkCustomerInfo(String guestName, String phoneNum) {
         if (!Pattern.matches(NAME_REGEX, guestName)) {
-            try {
-                throw new Exception();
-            } catch (Exception e) {
                 System.out.println("Name is Validate!");
                 return false;
             }
-        }
 
         if (!Pattern.matches(PHONE_REGEX, phoneNum)) {
-            try {
-                throw new Exception();
-            } catch (Exception e) {
                 System.out.println("Phone is Validate!");
                 return false;
             }
-        }
         return true;
     }
 }

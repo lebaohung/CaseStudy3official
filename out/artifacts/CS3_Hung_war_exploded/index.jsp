@@ -119,7 +119,7 @@
               <h4 class="ftco-46-subheading">Bò Úc nhập khẩu</h4>
 <%--              <h3 class="ftco-46-heading">Chicken Chimichurri Croquettes</h3>--%>
               <p class="mb-5">Tất cả thực phẩm tại lẩu Phan đều được kiểm soát và đảm bảo an toàn thực phẩm  <br><br><br></p>
-              <p><a href="https://www.instagram.com/nguyendiem.2k_/" target="_blank" class="btn-link">Xem thêm <span class="ion-android-arrow-forward"></span></a></p>
+              <p><a href="https://www.instagram.com/zennyrt/" target="_blank" class="btn-link">Xem thêm <span class="ion-android-arrow-forward"></span></a></p>
             </div>
           </div>
         </div>
@@ -140,16 +140,16 @@
           </span>
             TT02 MonCity, ngõ 4 Hàm Nghi, Mỹ Đình 1, Cầu Giấy, Hà Nội
           </p>
-          <p><span style="font-weight: bold">
-            Lẩu Phan Hải Phòng <br>
-          </span>
-            Số 21 Lô 8A4 Đường Lê Hồng Phong
-          </p>
-          <p><span style="font-weight: bold">
-           Lẩu Phan Phùng Khoang <br>
-          </span>
-            TT02 MonCity, ngõ 4 Hàm Nghi, Mỹ Đình 1, Cầu Giấy, Hà Nội
-          </p>
+          <c:forEach var="branch" items="${branchList}">
+            <p>
+              <span style="font-weight: bold">
+                <c:out value="${branch.getName()}"></c:out>
+                <br>
+              </span>
+              <c:out value="${branch.getAdd()}"></c:out>
+              SDT: <c:out value="${branch.getPhone()}"></c:out>
+            </p>
+          </c:forEach>
         </div>
       </div>
     </div>
