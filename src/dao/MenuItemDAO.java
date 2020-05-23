@@ -6,32 +6,16 @@ import java.util.List;
 
 public class MenuItemDAO {
 
-    private String jdbcUrl = "jdbc:mysql://localhost:3306/case_M3";
-    private String jdbcUser = "root";
-    private String jdbcPassword = "password";
     private static final String select_all_item = "select * from menu";
 
     public MenuItemDAO() {
     }
-
-    protected Connection getConnection() {
-        Connection connection = null;
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return connection;
-    }
+    Connection connection = JdbcConnection.getConnection();
 
     public List<MenuItem> selectAllItem() {
         List<MenuItem> items = new ArrayList<>();
 
         try (
-            Connection connection = getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(select_all_item);
             ) {
             ResultSet rs = preparedStatement.executeQuery();
