@@ -64,7 +64,7 @@ private GuestOrderDAO guestOrderDAO;
             Order order = new Order();
             int guestNum = Integer.parseInt(quantity);
             order.setGuestNum(guestNum);
-            order.setOrderTime(timeRadio);
+            order.setTime(timeRadio);
             order.setDate();
             order.setBranchId(chooseBranchId(branchRadio));
             order.setGuestId(getGuestByPhone(phoneNum));

@@ -8,7 +8,7 @@ public class Order {
     private int guestId;
     private int branchId;
     private String date;
-    private String orderTime;//order time
+    private String time;//order time
     private int guestNum;
     public Order() {
     }
@@ -19,7 +19,7 @@ public class Order {
         this.guestId = guestId;
         this.branchId = branchId;
         this.date = date;
-        this.orderTime = timeId;
+        this.time = timeId;
         this.guestNum = guestNum;
     }
 
@@ -57,12 +57,12 @@ public class Order {
         this.date = today.format(formatter);
     }
 
-    public String getOrderTime() {
-        return orderTime;
+    public String getTime() {
+        return time;
     }
 
-    public void setOrderTime(String orderTime) {
-        this.orderTime = orderTime +":00:00";
+    public void setTime(String time) {
+        this.time = time +":00:00";
     }
 
     public int getGuestNum() {

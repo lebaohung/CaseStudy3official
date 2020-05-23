@@ -12,12 +12,12 @@ public class GuestOrderDAO implements IGuestOrderDAO {
     //    private final String INSERT_ORDER_SQL=""
     private final String INSERT_GUESS_SQL = "INSERT INTO `case_m3`.`guest` (`name`, `phone`) VALUES (?, ?);";
     private final String INSERT_ORDER_SQL = "INSERT INTO `case_m3`.`orders` " +
-            "(`guestId`, `branchId`, `date`, `orderTime`, `guestNum`) VALUES (?, ?, ?, ?, ?);";
+            "(`guestId`, `branchId`, `date`, `time`, `guestNum`) VALUES (?, ?, ?, ?, ?);";
     private final String GET_GUEST_ID_BY_PHONE = "SELECT guestId FROM guest WHERE phone = ?;";
-    private final String GET_ORDER_INFO_TO_CHECK_VALIDATE = "SELECT guestId,branchId,date,orderTime FROM orders " +
+    private final String GET_ORDER_INFO_TO_CHECK_VALIDATE = "SELECT guestId,branchId,date,time FROM orders " +
             "where curdate()<=date;";
     private final String GET_ORDER_ID ="SELECT orderId from orders where guestId=? and branchId=?" +
-            " and date=? and orderTime=?";
+            " and date=? and time=?";
 
 
     public GuestOrderDAO() {
@@ -59,7 +59,7 @@ public class GuestOrderDAO implements IGuestOrderDAO {
                 preparedStatement.setInt(1, order.getGuestId());
                 preparedStatement.setInt(2, order.getBranchId());
                 preparedStatement.setString(3, order.getDate());
-                preparedStatement.setString(4, order.getOrderTime());
+                preparedStatement.setString(4, order.getTime());
                 preparedStatement.setInt(5, order.getGuestNum());
                 preparedStatement.executeUpdate();
                 getOrderId(order);
@@ -79,7 +79,7 @@ public class GuestOrderDAO implements IGuestOrderDAO {
             preparedStatement.setInt(1, order.getGuestId());
             preparedStatement.setInt(2, order.getBranchId());
             preparedStatement.setString(3, order.getDate());
-            preparedStatement.setString(4, order.getOrderTime());
+            preparedStatement.setString(4, order.getTime());
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 int orderId = rs.getInt("orderId");
@@ -122,12 +122,12 @@ public class GuestOrderDAO implements IGuestOrderDAO {
                 int guestId = rs.getInt("guestId");
                 int branchId = rs.getInt("branchId");
                 String date = rs.getString("date");
-                String orderTime = rs.getString("orderTime");
-                if (orderTime==null||orderTime.equals("") ) {
+                String time = rs.getString("time");
+                if (time==null||time.equals("") ) {
                     return true;
                 }
                 if (order.getGuestId() == guestId && order.getBranchId() == branchId
-                       && order.getDate().equals(date) && order.getOrderTime().equals(orderTime)) {
+                       && order.getDate().equals(date) && order.getTime().equals(time)) {
                     return false;
                 }
             }

@@ -118,7 +118,7 @@ background-size: cover;
             </div>
             <div class="col-60">
               <span style="font-size: 20px;background-color: #fcac81;" id="timeRadio" name="timeRadio">
-                 <c:set var="orderTimeString" value="${order.orderTime}"/>
+                 <c:set var="orderTimeString" value="${order.time}"/>
                   ${fn:substring(orderTimeString, 0, 5)}
               </span>
             </div>
