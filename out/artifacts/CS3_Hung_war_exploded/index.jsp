@@ -125,7 +125,6 @@
         </div>
 
       </div>
-    </div>-->
   </div> <!-- .section -->
 
   <div class="section pb-3 bg-white" id="section-about" data-aos="fade-up">
@@ -135,18 +134,13 @@
           <h2 class="heading mb-5">Hệ thống nhà hàng Lẩu Phan</h2>
           <p>Nhà hàng Lẩu Phan tự hào là thương hiệu buffet bò Úc lớn nhất Hà Nội, nhà hàng sở hữu không gian đường phố nhưng vẫn mang nét lịch sự, trẻ trung phù hợp với nhiều lứa tuổi. Thực khách sẽ rất hài lòng với menu lẩu gồm 4 vị đặc trưng tại Phan: Lẩu kim chi cay nức mũi, lẩu thái, lẩu dấm táo, lẩu chua sấu mang đậm nét Hà Thành xưa.</p>
           <p> Đặc biệt chính là nhà hàng có hai set buffet 99k và 129k tương đương với 8 và 17 món ăn vô cùng hấp dẫn, những đĩa bò Úc được nhập khẩu 100%, đảm bảo từ chất lượng đến vệ sinh thực phẩm cho thực khách.</p>
-          <p><span style="font-weight: bold">
-            Lẩu Phan Moncity <br>
-          </span>
-            TT02 MonCity, ngõ 4 Hàm Nghi, Mỹ Đình 1, Cầu Giấy, Hà Nội
-          </p>
           <c:forEach var="branch" items="${branchList}">
             <p>
               <span style="font-weight: bold">
                 <c:out value="${branch.getName()}"></c:out>
                 <br>
               </span>
-              <c:out value="${branch.getAdd()}"></c:out>
+              <c:out value="${branch.getAdd()}"></c:out> <br>
               SDT: <c:out value="${branch.getPhone()}"></c:out>
             </p>
           </c:forEach>
@@ -256,11 +250,20 @@
         <div class="col-md-4 mb-5">
           <div class="footer-widget">
 
-            <p><a href="#section-about" class="btn btn-primary btn-outline-primary">Hệ thống nhà hàng</a></p>
+            <p style="color: #ffa0a6">
+<%--              <a href="#section-about" class="btn btn-primary btn-outline-primary">Hệ thống nhà hàng</a>--%>
+              © 2020 Pink <br>
+              Lê Bảo Hưng <br>
+              Nguyễn Minh Sơn <br>
+              Phạm Đăng Linh <br>
+              Ngô Duy Hiếu <br>
+            </p>
           </div>
         </div>
         <div class="col-md-4 mb-5">
           <div class="footer-widget">
+            <a href="#section-about" class="btn btn-primary btn-outline-primary">Hệ thống nhà hàng</a>
+            <br><br><br>
             <p><a href="orderPage.jsp" class="btn btn-primary btn-outline-primary">Đặt bàn ngay</a></p>
           </div>
         </div>

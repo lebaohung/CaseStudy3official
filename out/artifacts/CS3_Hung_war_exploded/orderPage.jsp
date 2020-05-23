@@ -133,7 +133,7 @@ background-size: cover; ">
                 </tr>
                 <tr>
                     <td class="infoTd"><input type="text" name="nameText" id="nameText" style="width: 100%"
-                                              minlength="5"
+                                              minlength="2"
                                               maxlength="40" pattern="[aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻ
                                               ẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜở
                                               ỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ\s]+"
