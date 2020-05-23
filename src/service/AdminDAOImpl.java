@@ -7,16 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdminDAOImpl implements IAdminDAO{
-    private static final String jdbcURL = "jdbc:mysql://localhost:3306/case_m3";
+    private static final String jdbcURL = "jdbc:mysql://localhost:3306/case_M3";
     private static final String jdbcUsername = "root";
-    private static final String jdbcPassword = "admin123";
-    private static final String SELECT_ALL_USER = "select * from user";
+    private static final String jdbcPassword = "password";
+    private static final String SELECT_ALL_USER = "select * from admin";
     private static final String SELECT_USER_BY_NAME = "select * from admin where adName = ?";
 
     public Connection getDBConnect(){
         Connection conn = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
         } catch (SQLException e){
             e.printStackTrace();

@@ -8,7 +8,7 @@ public class MenuItemDAO {
 
     private String jdbcUrl = "jdbc:mysql://localhost:3306/case_M3";
     private String jdbcUser = "root";
-    private String jdbcPassword = "admin123";
+    private String jdbcPassword = "password";
     private static final String select_all_item = "select * from menu";
 
     public MenuItemDAO() {
@@ -17,7 +17,7 @@ public class MenuItemDAO {
     protected Connection getConnection() {
         Connection connection = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
