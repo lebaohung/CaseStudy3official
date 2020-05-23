@@ -19,23 +19,39 @@
 </head>
 <body>
 <div class="header">
-    <div class="admin_name">
-        <p> Hello Admin: + "${admin.getUsername}"</p>
-        <input type="submit" name="addadmin" id="addadmin" value="Add Admin" class="btn-primary">
-    </div>
-    <div class="sort_menu">
-        <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                Sắp xếp
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#"> Mã đơn </a>
-                <a class="dropdown-item" href="#"> Thời gian </a>
-                <a class="dropdown-item" href="#"> Chi nhánh </a>
-                <a class="dropdown-item" href="#"> Tên khách hàng</a>
-            </div>
-        </div>
-    </div>
+    <table>
+        <tr>
+            <td style="width: 90%">
+                <form class="admin_name">
+                    <p> Hello Admin: ${admin}</p>
+                    <button type="submit" class="btn btn-success login-button">Thêm admin</button>
+                </form>
+            </td>
+            <td style="width: 5%;">
+                <div class="sort_menu">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Sắp xếp
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"> Mã đơn </a>
+                            <a class="dropdown-item" href="#"> Thời gian </a>
+                            <a class="dropdown-item" href="#"> Chi nhánh </a>
+                            <a class="dropdown-item" href="#"> Tên khách hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td style="width: 5%">
+                <div class="log_out">
+                    <a href="#" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-log-out"></span> Thoát
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+
 </div>
 <div class="container">
     <table class="table table-hover" id="">
@@ -59,8 +75,8 @@
             <td></td>
             <td></td>
             <td>
-                <input type="submit" name="edit" id="edit" value="edit" class="btn-success">
-                <input type="submit" name="delete" id="delete" value="delete" class="btn-success">
+                <button name="button" class="btn btn-success"> Sửa </button>
+                <button name="button" class="btn btn-success"> Xóa </button>
             </td>
         </tr>
     </table>
