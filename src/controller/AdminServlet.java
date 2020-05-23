@@ -20,13 +20,6 @@ public class AdminServlet extends HttpServlet {
     AdminDAOImpl adminDAO = new AdminDAOImpl();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String action = request.getParameter("action");
-//        switch (action) {
-//            case "login":
-//                checkValid(request, response);
-//            default:
-//                break;
-//        }
         checkValid(request, response);
 
     }
@@ -57,7 +50,7 @@ public class AdminServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/dashboard");
         } else {
             request.setAttribute("message", LOGIN_ERROR_MESSAGE);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("signin.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);
         }
     }
