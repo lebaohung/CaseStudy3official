@@ -1,0 +1,29 @@
+.table_header {
+    text-align: center;
+    font-size: 21px;
+    width: 100%;
+}
+
+.admin_name{
+    float: left;
+    padding: 15px 30px;
+}
+
+.sort_menu{
+    float: right;
+    padding: 25px 60px;
+}
+
+.log_out{
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.header{
+    height: 70px;
+}
+
+table{
+    width: 100%;
+}
