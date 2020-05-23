@@ -30,8 +30,8 @@ background-size: cover;
 ">ĐƠN HÀNG CỦA BẠN ĐÃ TỒN TẠI</h2>
     <form action="index.jsp">
         <div class="row">
-            <div style="margin-bottom: 2%">
-                <p style="background-color: #fcac81;font-style: italic;text-align: center">
+            <div style="margin-bottom: 7%">
+                <p style="background-color: #fcac81;font-style: italic;text-align: center;">
                     Mọi vấn đề xin quý khách vui lòng liên hệ với tổng đài hỗ trợ 19001007 </p>
             </div>
             <div class="row">
