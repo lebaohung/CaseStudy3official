@@ -12,3 +12,4 @@ create table orders (
     on delete cascade
     on update cascade
 );
+ALTER TABLE `orders` ADD UNIQUE `unique_index`(`date`, `time`,`guestId`,`branchId`);

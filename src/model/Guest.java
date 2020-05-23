@@ -8,7 +8,7 @@ public class Guest {
     public Guest() {
     }
     public Guest(String guestName, String guestPhone) {
-        this.guestID = guestID;
+//        this.guestID = guestID;
         this.guestName = guestName;
         this.guestPhone = guestPhone;
     }

@@ -75,7 +75,6 @@ private GuestOrderDAO guestOrderDAO;
                 return;
             }
         }
-
     }
 
     private void validateOrderDispatcher(HttpServletRequest request, HttpServletResponse response)

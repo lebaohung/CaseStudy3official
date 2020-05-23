@@ -1,4 +1,4 @@
-package service;
+package dao;
 
 import model.Admin;
 
@@ -6,32 +6,16 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminDAOImpl implements IAdminDAO{
-    private static final String jdbcURL = "jdbc:mysql://localhost:3306/case_m3";
-    private static final String jdbcUsername = "root";
-    private static final String jdbcPassword = "admin123";
-    private static final String SELECT_ALL_USER = "select * from user";
+public class AdminDAOImpl implements IAdminDAO {
+    private static final String SELECT_ALL_USER = "select * from admin";
     private static final String SELECT_USER_BY_NAME = "select * from admin where adName = ?";
 
-    public Connection getDBConnect(){
-        Connection conn = null;
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-        } catch (SQLException e){
-            e.printStackTrace();
-        } catch (ClassNotFoundException e){
-            e.printStackTrace();
-        }
-        return conn;
-    }
-
+    Connection connection = JdbcConnection.getConnection();
     @Override
     public Admin checkValid(String inputUsername, String inputPassword) {
         Admin admin = null;
         try {
-            Connection conn = getDBConnect();
-            PreparedStatement preparedStatement = conn.prepareStatement(SELECT_USER_BY_NAME);
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_NAME);
             preparedStatement.setString(1, inputUsername);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()){
@@ -51,8 +35,7 @@ public class AdminDAOImpl implements IAdminDAO{
     public List<Admin> selectAllAdmin() {
         List<Admin> admins = new ArrayList<>();
         try {
-            Connection conn = getDBConnect();
-            PreparedStatement preparedStatement = conn.prepareStatement(SELECT_ALL_USER);
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USER);
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
 

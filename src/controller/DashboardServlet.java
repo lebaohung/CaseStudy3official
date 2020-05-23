@@ -21,5 +21,6 @@ public class DashboardServlet extends HttpServlet {
     public void showDashboard(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
             RequestDispatcher dispatcher = request.getRequestDispatcher("admin_interface.jsp");
             dispatcher.forward(request, response);
+
     }
 }
