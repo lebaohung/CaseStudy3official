@@ -9,7 +9,7 @@ public class GuestOrderDAO implements IGuestOrderDAO {
     private String jdbcURL = "jdbc:mysql://localhost:3306/case_M3";
     private String jdbcUsername = "root";
     private String jdbcPassword = "123456789";
-    //    private final String INSERT_ORDER_SQL=""
+
     private final String INSERT_GUESS_SQL = "INSERT INTO `case_m3`.`guest` (`name`, `phone`) VALUES (?, ?);";
     private final String INSERT_ORDER_SQL = "INSERT INTO `case_m3`.`orders` " +
             "(`guestId`, `branchId`, `date`, `time`, `guestNum`) VALUES (?, ?, ?, ?, ?);";

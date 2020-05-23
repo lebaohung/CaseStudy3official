@@ -8,7 +8,7 @@ public class MenuItemDAO {
 
     private String jdbcUrl = "jdbc:mysql://localhost:3306/case_M3";
     private String jdbcUser = "root";
-    private String jdbcPassword = "admin123";
+    private String jdbcPassword = "123456789";
     private static final String select_all_item = "select * from menu";
 
     public MenuItemDAO() {
