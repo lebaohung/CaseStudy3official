@@ -33,10 +33,10 @@ background-size: cover;
     <form action="/index.jsp" method="get" onsubmit="openForm()">
         <div class="row">
             <div class="col-40">
-                <label for="orderId" style="padding-left: 10px;background-color: #fcac81;">Mã đơn </label>
+                <label for="orderId" style="padding-left: 100px;background-color: #fcac81;">Mã đơn </label>
             </div>
             <div class="col-60">
-                <span style="font-size: 20px;background-color: #fcac81;" id="orderId" name="orderId">
+                <span style="font-size: 20px;background-color: #fcac81;padding-left: 50px;font-weight: bold" id="orderId" name="orderId">
                     ${order.orderId}
                 </span>
             </div>
@@ -44,10 +44,10 @@ background-size: cover;
 
         <div class="row">
             <div class="col-40">
-                <label for="nameText" style="padding-left: 10px;background-color: #fcac81;">Tên khách hàng </label>
+                <label for="nameText" style="padding-left: 100px;background-color: #fcac81;">Tên khách hàng </label>
             </div>
             <div class="col-60">
-                <span style="font-size: 20px;background-color: #fcac81;" id="nameText" name="nameText">
+                <span style="font-size: 20px;background-color: #fcac81;padding-left: 50px;font-weight: bold" id="nameText" name="nameText">
                     ${guestName}
                 </span>
             </div>
@@ -55,10 +55,10 @@ background-size: cover;
 
         <div class="row">
             <div class="col-40">
-                <label for="quantity" style="padding-left: 10px;background-color: #fcac81;">Số người ăn </label>
+                <label for="quantity" style="padding-left: 100px;background-color: #fcac81;">Số người ăn </label>
             </div>
             <div class="col-60">
-                <span style="font-size: 20px;background-color: #fcac81;" id="quantity" name="nameText">
+                <span style="font-size: 20px;background-color: #fcac81;padding-left: 50px;font-weight: bold" id="quantity" name="nameText">
                     ${order.guestNum}
                 </span>
             </div>
@@ -66,10 +66,10 @@ background-size: cover;
 
         <div class="row">
             <div class="col-40">
-                <label for="branchRadio" style="padding-left: 10px ;background-color: #fcac81;">Chi nhánh </label>
+                <label for="branchRadio" style="padding-left: 100px ;background-color: #fcac81;">Chi nhánh </label>
             </div>
             <div class="col-60">
-               <span style="font-size: 20px;background-color: #fcac81;" id="branchRadio" name="nameText">
+               <span style="font-size: 20px;background-color: #fcac81;padding-left: 50px;font-weight: bold" id="branchRadio" name="nameText">
 
                     <c:choose>
 
@@ -98,10 +98,10 @@ background-size: cover;
 
         <div class="row">
             <div class="col-40">
-                <label for="dateRadio" style="padding-left: 10px;background-color: #fcac81;">Ngày nhận bàn </label>
+                <label for="dateRadio" style="padding-left: 100px;background-color: #fcac81;">Ngày nhận bàn </label>
             </div>
             <div class="col-60">
-                 <span style="font-size: 20px;background-color: #fcac81;" id="dateRadio" name="dateRadio">
+                 <span style="font-size: 20px;background-color: #fcac81;padding-left: 50px;font-weight: bold" id="dateRadio" name="dateRadio">
                     <c:set var="dateOrder" value="${order.date}"/>
                     <c:set var="year" value="${fn:substring(dateOrder, 0, 4)}"/>
                     <c:set var="month" value="${fn:substring(dateOrder, 5, 7)}"/>
@@ -115,10 +115,10 @@ background-size: cover;
 
         <div class="row">
             <div class="col-40">
-                <label for="timeRadio" style="padding-left: 10px;background-color: #fcac81;">Giờ nhận bàn </label>
+                <label for="timeRadio" style="padding-left: 100px;background-color: #fcac81;">Giờ nhận bàn </label>
             </div>
             <div class="col-60">
-              <span style="font-size: 20px;background-color: #fcac81;" id="timeRadio" name="timeRadio">
+              <span style="font-size: 20px;background-color: #fcac81;padding-left: 50px;font-weight: bold" id="timeRadio" name="timeRadio">
                  <c:set var="orderTimeString" value="${order.time}"/>
                   ${fn:substring(orderTimeString, 0, 5)}
               </span>
