@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdminDAOImpl implements IAdminDAO{
-    private static final String jdbcURL = "jdbc:mysql://localhost:3306/casestudy_demo";
+    private static final String jdbcURL = "jdbc:mysql://localhost:3306/case_m3";
     private static final String jdbcUsername = "root";
     private static final String jdbcPassword = "admin123";
     private static final String SELECT_ALL_USER = "select * from user";
-    private static final String SELECT_USER_BY_NAME = "select * from user where username = ?";
+    private static final String SELECT_USER_BY_NAME = "select * from admin where adName = ?";
 
     public Connection getDBConnect(){
         Connection conn = null;
@@ -46,26 +46,6 @@ public class AdminDAOImpl implements IAdminDAO{
         }
         return admin;
     }
-
-//    @Override
-//    public boolean checkValid(String inputUsername, String inputPassword) {
-//        try {
-//            Connection conn = getDBConnect();
-//            PreparedStatement preparedStatement = conn.prepareStatement(SELECT_USER_BY_NAME);
-//            preparedStatement.setString(1, inputUsername);
-//            ResultSet rs = preparedStatement.executeQuery();
-//            while (rs.next()){
-//                String password = rs.getString("password");
-//                if (password.equals(inputPassword)){
-//                    return true;
-//                }
-//            }
-//
-//        } catch (SQLException e){
-//            e.printStackTrace();
-//        }
-//        return false;
-//    }
 
     @Override
     public List<Admin> selectAllAdmin() {
