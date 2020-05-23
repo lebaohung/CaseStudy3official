@@ -23,7 +23,7 @@
         <tr>
             <td style="width: 90%">
                 <form class="admin_name">
-                    <p> Hello Admin: ${admin}</p>
+                    <p> Hello Admin </p>
                     <button type="submit" class="btn btn-success login-button">Thêm admin</button>
                 </form>
             </td>
@@ -43,11 +43,9 @@
                 </div>
             </td>
             <td style="width: 5%">
-                <div class="log_out">
-                    <a href="#" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-log-out"></span> Thoát
-                    </a>
-                </div>
+                <form method="post" class="log_out">
+                    <button name="button" class="btn btn-success"> Thoát </button>
+                </form>
             </td>
         </tr>
     </table>

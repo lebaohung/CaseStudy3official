@@ -49,7 +49,7 @@ public class AdminServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/dashboard");
         } else {
             request.setAttribute("message", LOGIN_ERROR_MESSAGE);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("signin.jsp");
             dispatcher.forward(request, response);
         }
     }
