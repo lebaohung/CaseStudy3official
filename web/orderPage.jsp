@@ -49,29 +49,30 @@ background-size: cover; ">
             <section class="form plan">
                 <p style="font-style: oblique;font-size: 20px" id="selectBranch">
                     <span style="color: red;font-size: 30px">*</span> CHỌN MỘT CHI NHÁNH </p>
+
                 <input type="radio" name="branchRadio" id="1" value="Lẩu Phan Moncity" required>
-                <label class="col" for="1">
+                <label class="col borderBox" for="1" style="border-radius: 20px">
                     <h3>Lẩu Phan Moncity</h3>
                     <h5>TT02 MonCity, ngõ 4 Hàm Nghi, Mỹ Đình 1, Cầu Giấy, Hà Nội</h5>
                 </label>
 
                 <input type="radio" name="branchRadio" id="2" value="Lẩu Phan Hải Phòng" required>
-                <label class="col" for="2">
+                <label class="col" for="2" style="border-radius: 20px">
                     <h3>Lẩu Phan Hải Phòng</h3>
                     <h5>SN21 LÔ 8A4 ĐƯỜNG LÊ HỒNG PHONG</h5>
                 </label>
                 <input type="radio" name="branchRadio" id="3" value="Lẩu Phan Phùng Khoang" required>
-                <label class="col" for="3">
+                <label class="col" for="3" style="border-radius: 20px">
                     <h3>Lẩu Phan Phùng Khoang</h3>
                     <h5>21/2 Ngõ 67 Phùng Khoang,Từ Liêm,Hà Nội</h5>
                 </label>
                 <input type="radio" name="branchRadio" id="4" value="Lẩu Phan Ðào Duy Anh" required>
-                <label class="col" for="4">
+                <label class="col" for="4" style="border-radius: 20px">
                     <h3>Lẩu Phan Ðào Duy Anh</h3>
                     <h5>Số 7 Ðào Duy Anh , Ðống Ða, Hà Nội</h5>
                 </label>
                 <input type="radio" name="branchRadio" id="5" value="Lẩu Phan Nguyễn Văn Cừ" required>
-                <label class="col" for="5">
+                <label class="col" for="5" style="border-radius: 20px">
                     <h3> Lẩu Phan Nguyễn Văn Cừ </h3>
                     <h5>Số 485 Nguyễn Văn Cừ , Long Biên , Hà Nội</h5>
                 </label>
@@ -83,29 +84,29 @@ background-size: cover; ">
                     <span style="color: red;font-size: 30px">*</span> CHỌN GIỜ ĂN</p>
                 <div style="margin:0 auto;width: 70%">
                     <input type="radio" name="timeRadio" id="11" value="11" required>
-                    <label class="colTime" for="11" id="label11">11:00</label>
+                    <label class="colTime" for="11" id="label11" style="border-radius: 10px">11:00</label>
                     <input type="radio" name="timeRadio" id="12" value="12" required>
-                    <label class=" colTime" for="12" id="label12">12:00</label>
+                    <label class=" colTime" for="12" id="label12" style="border-radius: 10px">12:00</label>
                     <input type="radio" name="timeRadio" id="13" value="13" required>
-                    <label class="colTime" for="13" id="label13">13:00</label>
+                    <label class="colTime" for="13" id="label13" style="border-radius: 10px">13:00</label>
                     <input type="radio" name="timeRadio" id="14" value="14" required>
-                    <label class="colTime" for="14" id="label14">14:00</label>
+                    <label class="colTime" for="14" id="label14" style="border-radius: 10px">14:00</label>
                     <input type="radio" name="timeRadio" id="15" value="15" required>
-                    <label class="colTime" for="15" id="label15">15:00</label>
+                    <label class="colTime" for="15" id="label15" style="border-radius: 10px">15:00</label>
                     <input type="radio" name="timeRadio" id="16" value="16" required>
-                    <label class="colTime" for="16" id="label16">16:00</label>
+                    <label class="colTime" for="16" id="label16" style="border-radius: 10px">16:00</label>
                     <input type="radio" name="timeRadio" id="17" value="17" required>
-                    <label class="colTime" for="17" id="label17">17:00</label>
+                    <label class="colTime" for="17" id="label17" style="border-radius: 10px">17:00</label>
                     <input type="radio" name="timeRadio" id="18" value="18" required>
-                    <label class="colTime" for="18" id="label18">18:00</label>
+                    <label class="colTime" for="18" id="label18" style="border-radius: 10px">18:00</label>
                     <input type="radio" name="timeRadio" id="19" value="19" required>
-                    <label class="colTime" for="19" id="label19">19:00</label>
+                    <label class="colTime" for="19" id="label19" style="border-radius: 10px">19:00</label>
                     <input type="radio" name="timeRadio" id="20" value="20" required>
-                    <label class="colTime" for="20" id="label20">20:00</label>
+                    <label class="colTime" for="20" id="label20" style="border-radius: 10px">20:00</label>
                     <input type="radio" name="timeRadio" id="21" value="21" required>
-                    <label class="colTime" for="21" id="label21">21:00</label>
+                    <label class="colTime" for="21" id="label21" style="border-radius: 10px">21:00</label>
                     <input type="radio" name="timeRadio" id="22" value="22" required>
-                    <label class="colTime" for="22" id="label22">22:00</label>
+                    <label class="colTime" for="22" id="label22" style="border-radius: 10px">22:00</label>
                 </div>
             </section>
 <%--        </div>--%>

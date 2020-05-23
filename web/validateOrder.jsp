@@ -23,9 +23,10 @@ background-size: cover;
                              style=" position: absolute;"></a>
 </div>
 
-<div id="confirmContent" style="margin-top: 6%;">
+<div id="confirmContent" style="margin-top: 6%; border-radius: 40px;">
 
-    <h2 style="text-align: center;margin-bottom: 5%;margin-top: 3%;  background-color: #fcac81;
+    <h2 style="text-align: center;margin-left: 10%;margin-bottom: 5%;
+    margin-top: 3%;width: 75% ; background-color: #fcac81;padding-left: 5%;
 ">ĐƠN HÀNG CỦA BẠN ĐÃ TỒN TẠI</h2>
     <form action="index.jsp">
         <div class="row">

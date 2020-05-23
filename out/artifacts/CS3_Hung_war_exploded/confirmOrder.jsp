@@ -26,8 +26,9 @@ background-size: cover;
     <%--    </div>--%>
 </div>
 
-<div id="confirmContent" style="margin-top: 6%;">
-    <h2 style="text-align: center;margin-bottom: 5%;margin-top: 3%;  background-color: #fcac81;
+<div id="confirmContent" style=" border-radius: 40px;margin-top: 6%;">
+    <h2 style="text-align: center;margin-left: 10%;margin-bottom: 5%;
+    margin-top: 3%;width: 75% ; background-color: #fcac81;padding-left: 5%;
 ">ĐẶT BÀN THÀNH CÔNG</h2>
     <form action="/index.jsp" method="get" onsubmit="openForm()">
         <div class="row">
