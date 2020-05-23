@@ -44,7 +44,7 @@ background-size: cover; ">
         <h3 style="text-align: center">Buffet bò úc ăn đến lúc phải bò thì thôi</h3>
     </div>
 
-    <form class="form" action="confirmOrder.jsp">
+    <form class="form" action="/orderServlet?action=orderInfo">
 <%--        <div style="margin-top: 50px;margin-bottom: 50px">--%>
             <section class="form plan">
                 <p style="font-style: oblique;font-size: 20px" id="selectBranch">
@@ -127,13 +127,13 @@ background-size: cover; ">
                     <td class="infoTd" style="background:#fcac81;">
                         <span style="color: red;background:#fcac81;">*</span> Số người ăn
                         <p style="font-style: oblique; font-size: 20px;text-align: center;background:#fcac81;">
-                            (1-20 people)</p>
+                            (1-50 people)</p>
                     </td>
                 </tr>
                 <tr>
                     <td class="infoTd"><input type="text" name="nameText" id="nameText" style="width: 100%"
                                               minlength="5"
-                                              maxlength="50" pattern="[aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻ
+                                              maxlength="40" pattern="[aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻ
                                               ẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜở
                                               ỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ\s]+"
                                               required></td>
@@ -143,7 +143,7 @@ background-size: cover; ">
                     </td>
 
                     <td class="infoTd">
-                        <input type="number" id="quantity" name="quantity" min="1" max="20" style="width: 100%"
+                        <input type="number" id="quantity" name="quantity" min="1" max="50" style="width: 100%"
                                required>
 
                     </td>
@@ -152,7 +152,7 @@ background-size: cover; ">
         </div>
 
         <div style="margin-top: 50px;margin-bottom: 10px">
-            <button type="submit" class="button button1" onclick="openForm()">TIẾP</button>
+            <button type="submit" id="nextButton" class="button button1" onclick="openForm()" >ĐẶT BÀN</button>
         </div>
     </form>
 
@@ -160,7 +160,7 @@ background-size: cover; ">
         <div class="modal-content">
             <div class="modal-header">
                 <h2>CHÚNG TÔI ĐÃ ĐÓNG CỬA!</h2>
-                <span class="close">&times;</span>
+                <a href="index.jsp"> <span class="close">&times;</span></a>
             </div>
             <div class="modal-body">
                 <h3>Quý khách vui lòng quay lại vào ngày mai </h3>
@@ -176,6 +176,7 @@ background-size: cover; ">
 </article>
 
 <script>
+
     function displayTime() {
         const CLOSED_TIME = 22;
         let d = new Date();
@@ -203,6 +204,7 @@ background-size: cover; ">
                 radioButtons[i].style.background = 'red';
                 document.getElementById("label" + (i + 11)).style.background = '#ff4141';
             }
+
             if (h >= CLOSED_TIME) {
                 modal.style.display = "block";
             }
