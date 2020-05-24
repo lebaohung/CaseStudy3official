@@ -48,7 +48,7 @@
         </form>
     </div>
     <div class="mt-4 signup_box">
-        <div class="d-flex justify-content-center links">
+        <div class="d-flex justify-content- center links">
             <a href="index.jsp" class="ml-2"> Quay lại trang chủ</a>
         </div>
     </div>

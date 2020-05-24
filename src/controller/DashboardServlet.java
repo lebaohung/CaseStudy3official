@@ -32,7 +32,7 @@ public class DashboardServlet extends HttpServlet {
                 case "delete":
                     deleteOrder(request, response);
                     break;
-                case "logout":
+                default:
                     logOut(request, response);
                     break;
             }

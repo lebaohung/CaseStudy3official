@@ -123,10 +123,9 @@ private final String INSERT_ORDER_SQL = "INSERT INTO `case_M3`.`orders` " +
     @Override
     public List<Order> selectAllOrders() {
         List<Order> orders = new ArrayList<>();
-        try (Connection conn = JdbcConnection.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement(GET_ALL_ORDERS);) {
-
-            ResultSet rs = preparedStatement.executeQuery();
+        try {
+             PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_ORDERS);
+             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
                 int id = rs.getInt("orderId");
@@ -147,8 +146,8 @@ private final String INSERT_ORDER_SQL = "INSERT INTO `case_M3`.`orders` " +
     @Override
     public Order selectOrder(int id) {
         Order order = null;
-        try(Connection conn = JdbcConnection.getConnection();
-            PreparedStatement preparedStatement = conn.prepareStatement(GET_ORDER_BY_ID);) {
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_ORDER_BY_ID);
             preparedStatement.setInt(1, id);
 
             ResultSet rs = preparedStatement.executeQuery();
@@ -170,8 +169,8 @@ private final String INSERT_ORDER_SQL = "INSERT INTO `case_M3`.`orders` " +
     @Override
     public boolean deleteOrder(int id) throws SQLException {
         boolean rowDelete;
-        try(Connection conn = JdbcConnection.getConnection();
-            PreparedStatement preparedStatement = conn.prepareStatement(DELETE_ORDER);) {
+        try(
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_ORDER);) {
             preparedStatement.setInt(1, id);
             rowDelete = preparedStatement.executeUpdate() > 0;
         }
@@ -181,8 +180,8 @@ private final String INSERT_ORDER_SQL = "INSERT INTO `case_M3`.`orders` " +
     @Override
     public boolean updateOrder(Order order) throws SQLException {
         boolean rowUpdate;
-        try (Connection conn = JdbcConnection.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement(UPDATE_ORDER);) {
+        try (
+             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_ORDER);) {
             preparedStatement.setInt(1, order.getGuestId());
             preparedStatement.setInt(2, order.getBranchId());
             preparedStatement.setString(3, order.getDate());

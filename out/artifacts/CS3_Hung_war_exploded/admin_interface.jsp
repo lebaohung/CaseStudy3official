@@ -24,7 +24,7 @@
             <td style="width: 90%">
                 <form class="admin_name">
                     <p> Hello Admin </p>
-                    <button type="submit" class="btn btn-success login-button">Thêm admin</button>
+                    <a class="btn btn-success" href="/admins">Danh sách admin</a>
                 </form>
             </td>
             <td style="width: 5%;">
@@ -73,8 +73,8 @@
                 <td><c:out value="${order.date}"/></td>
                 <td><c:out value="${order.guestNum}"/></td>
                 <td>
-                    <a href="/dashboard?action=edit&id=${order.orderId}">Edit</a>
-                    <a href="/dashboard?action=delete&id=${order.orderId}">Delete</a>
+                    <a class="btn btn-primary" href="/dashboard?action=edit&id=${order.orderId}">Edit</a>
+                    <a class="btn btn-danger" href="/dashboard?action=delete&id=${order.orderId}">Delete</a>
                 </td>
             </tr>
         </c:forEach>
