@@ -24,7 +24,7 @@
             <td style="width: 90%">
                 <form class="admin_name">
                     <p> Hello Admin </p>
-                    <button type="submit" class="btn btn-success login-button">Thêm admin</button>
+                    <a class="btn btn-success" href="/admins">Danh sách admin</a>
                 </form>
             </td>
             <td style="width: 5%;">
@@ -56,26 +56,28 @@
             <td colspan="7"> Danh sách đặt bàn</td>
         </tr>
         <tr>
-            <th> STT</th>
             <th> Mã đơn</th>
             <th> Thời gian</th>
             <th> Chi nhánh</th>
             <th> Tên khách hàng</th>
-            <th> Số điện thoại</th>
-            <th> Thao tác</th>
+            <th> Ngày order </th>
+            <th> Số lượng khách</th>
+            <th colspan="2"> Thao tác</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-                <button name="button" class="btn btn-success"> Sửa </button>
-                <button name="button" class="btn btn-success"> Xóa </button>
-            </td>
-        </tr>
+        <c:forEach var="order" items="${listOrder}">
+            <tr>
+                <td><c:out value="${order.orderId}"/></td>
+                <td><c:out value="${order.time}"/></td>
+                <td><c:out value="${order.branchId}"/></td>
+                <td><c:out value="${order.guestId}"/></td>
+                <td><c:out value="${order.date}"/></td>
+                <td><c:out value="${order.guestNum}"/></td>
+                <td>
+                    <a class="btn btn-primary" href="/dashboard?action=edit&id=${order.orderId}">Edit</a>
+                    <a class="btn btn-danger" href="/dashboard?action=delete&id=${order.orderId}">Delete</a>
+                </td>
+            </tr>
+        </c:forEach>
     </table>
 </div>
 </body>
