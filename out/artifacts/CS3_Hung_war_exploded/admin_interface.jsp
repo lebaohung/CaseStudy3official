@@ -56,26 +56,28 @@
             <td colspan="7"> Danh sách đặt bàn</td>
         </tr>
         <tr>
-            <th> STT</th>
             <th> Mã đơn</th>
             <th> Thời gian</th>
             <th> Chi nhánh</th>
             <th> Tên khách hàng</th>
-            <th> Số điện thoại</th>
-            <th> Thao tác</th>
+            <th> Ngày order </th>
+            <th> Số lượng khách</th>
+            <th colspan="2"> Thao tác</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-                <button name="button" class="btn btn-success"> Sửa </button>
-                <button name="button" class="btn btn-success"> Xóa </button>
-            </td>
-        </tr>
+        <c:forEach var="order" items="${listOrder}">
+            <tr>
+                <td><c:out value="${order.orderId}"/></td>
+                <td><c:out value="${order.time}"/></td>
+                <td><c:out value="${order.branchId}"/></td>
+                <td><c:out value="${order.guestId}"/></td>
+                <td><c:out value="${order.date}"/></td>
+                <td><c:out value="${order.guestNum}"/></td>
+                <td>
+                    <a href="/dashboard?action=edit&id=${order.orderId}">Edit</a>
+                    <a href="/dashboard?action=delete&id=${order.orderId}">Delete</a>
+                </td>
+            </tr>
+        </c:forEach>
     </table>
 </div>
 </body>

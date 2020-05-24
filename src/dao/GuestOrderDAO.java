@@ -4,6 +4,8 @@ import model.Guest;
 import model.Order;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuestOrderDAO implements IGuestOrderDAO {
 private final String INSERT_GUESS_SQL = "INSERT INTO `case_M3`.`guest` (`name`, `phone`) VALUES (?, ?);";
@@ -14,6 +16,10 @@ private final String INSERT_ORDER_SQL = "INSERT INTO `case_M3`.`orders` " +
             "where curdate()<=date;";
     private final String GET_ORDER_ID ="SELECT orderId from orders where guestId=? and branchId=?" +
             " and date=? and time=?";
+    private  final String GET_ALL_ORDERS = "SELECT * FROM orders;";
+    private final String GET_ORDER_BY_ID = "SELECT * FROM orders WHERE orderID = ?";
+    private final String DELETE_ORDER = "DELETE FROM orders WHERE orderId = ?";
+    private final String UPDATE_ORDER = "UPDATE orders SET guestId = ?, branchId = ?, date = ?, time = ?, guestNum = ? WHERE orderId = ?;";
     Connection connection = JdbcConnection.getConnection();
 
     public GuestOrderDAO() {
@@ -114,4 +120,96 @@ private final String INSERT_ORDER_SQL = "INSERT INTO `case_M3`.`orders` " +
         return true;
     }
 
+    @Override
+    public List<Order> selectAllOrders() {
+        List<Order> orders = new ArrayList<>();
+        try (Connection conn = JdbcConnection.getConnection();
+             PreparedStatement preparedStatement = conn.prepareStatement(GET_ALL_ORDERS);) {
+
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("orderId");
+                int guestId = rs.getInt("guestId");
+                int branchId = rs.getInt("branchId");
+                String date = rs.getString("date");
+                String time = rs.getString("time");
+                int guestNum = rs.getInt("guestNum");
+                orders.add(new Order(id, guestId, branchId, date, time, guestNum));
+            }
+
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return  orders;
+    }
+
+    @Override
+    public Order selectOrder(int id) {
+        Order order = null;
+        try(Connection conn = JdbcConnection.getConnection();
+            PreparedStatement preparedStatement = conn.prepareStatement(GET_ORDER_BY_ID);) {
+            preparedStatement.setInt(1, id);
+
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                int guestId = rs.getInt("guestId");
+                int branchId = rs.getInt("branchId");
+                String date = rs.getString("date");
+                String time = rs.getString("time");
+                int guestNum = rs.getInt("guestNum");
+                order = new Order(id, guestId, branchId, date, time, guestNum);
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return order;
+    }
+
+    @Override
+    public boolean deleteOrder(int id) throws SQLException {
+        boolean rowDelete;
+        try(Connection conn = JdbcConnection.getConnection();
+            PreparedStatement preparedStatement = conn.prepareStatement(DELETE_ORDER);) {
+            preparedStatement.setInt(1, id);
+            rowDelete = preparedStatement.executeUpdate() > 0;
+        }
+        return rowDelete;
+    }
+
+    @Override
+    public boolean updateOrder(Order order) throws SQLException {
+        boolean rowUpdate;
+        try (Connection conn = JdbcConnection.getConnection();
+             PreparedStatement preparedStatement = conn.prepareStatement(UPDATE_ORDER);) {
+            preparedStatement.setInt(1, order.getGuestId());
+            preparedStatement.setInt(2, order.getBranchId());
+            preparedStatement.setString(3, order.getDate());
+            preparedStatement.setString(4, order.getTime());
+            preparedStatement.setInt(5, order.getGuestNum());
+
+            preparedStatement.setInt(6, order.getOrderId());
+
+            rowUpdate = preparedStatement.executeUpdate() > 0;
+        }
+        return rowUpdate;
+    }
+
+
+    private void printSQLException(SQLException ex) {
+        for (Throwable e : ex) {
+            if (e instanceof SQLException) {
+                e.printStackTrace(System.err);
+                System.err.println("SQLState: " + ((SQLException) e).getSQLState());
+                System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
+                System.err.println("Message: " + e.getMessage());
+                Throwable t = ex.getCause();
+                while (t != null) {
+                    System.out.println("Cause: " + t);
+                    t = t.getCause();
+                }
+            }
+        }
+    }
 }
