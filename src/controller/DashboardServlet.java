@@ -61,7 +61,7 @@ public class DashboardServlet extends HttpServlet {
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
-        showDashboard(request, response);
+//        showDashboard(request, response);
     }
 
     public void showDashboard(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
