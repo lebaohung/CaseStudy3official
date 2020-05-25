@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GuestOrderDAO implements IGuestOrderDAO {
-private final String INSERT_GUESS_SQL = "INSERT INTO `case_M3`.`guest` (`name`, `phone`) VALUES (?, ?);";
-private final String INSERT_ORDER_SQL = "INSERT INTO `case_M3`.`orders` " +
+private final String INSERT_GUESS_SQL = "INSERT INTO `case_m3`.`guest` (`name`, `phone`) VALUES (?, ?);";
+private final String INSERT_ORDER_SQL = "INSERT INTO `case_m3`.`orders` " +
             "(`guestId`, `branchId`, `date`, `time`, `guestNum`) VALUES (?, ?, ?, ?, ?);";
     private final String GET_GUEST_ID_BY_PHONE = "SELECT guestId FROM guest WHERE phone = ?;";
     private final String GET_ORDER_INFO_TO_CHECK_VALIDATE = "SELECT guestId,branchId,date,time FROM orders " +

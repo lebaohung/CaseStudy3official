@@ -39,13 +39,13 @@
             <tr style="text-align: center;">
                 <th>Admin Name: </th>
                 <td>
-                    <input type="text" name="adName" id="adName" size="45"/>
+                    <input type="text" name="adName" id="adName" size="45" minlength="4" maxlength="30"/>
                 </td>
             </tr>
             <tr style="text-align: center;">
                 <th>Password: </th>
                 <td>
-                    <input type="text" name="password" id="password" size="45"/>
+                    <input type="text" name="password" id="password" size="45" minlength = "4" maxlength = "30"/>
                 </td>
             </tr>
             <tr>

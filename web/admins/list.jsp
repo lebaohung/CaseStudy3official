@@ -38,6 +38,11 @@
                 </td>
             </tr>
         </c:forEach>
+        <tr>
+            <td colspan="3" align="center">
+                <a href="/dashboard?action=orders" class="btn btn-success btn-lg">Quay lại danh sách đơn hàng</a>
+            </td>
+        </tr>
     </table>
 </div>
 </body>
