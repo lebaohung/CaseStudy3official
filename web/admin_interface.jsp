@@ -68,8 +68,21 @@
             <tr>
                 <td><c:out value="${order.orderId}"/></td>
                 <td><c:out value="${order.time}"/></td>
-                <td><c:out value="${order.branchId}"/></td>
-                <td><c:out value="${order.guestId}"/></td>
+                <c:forEach items="${branchList}" var="branch">
+                    <c:if test="${branch.getBranchId() == order.getBranchId()}">
+                        <td>
+                            <c:out value="${branch.getName()}"/>
+                        </td>
+                    </c:if>
+                </c:forEach>
+                <c:forEach items="${guestList}" var="guest">
+                    <c:if test="${guest.getGuestID() == order.getGuestId()}">
+                        <td>
+                            <c:out value="${guest.getGuestName()}"/>
+                        </td>
+                    </c:if>
+                </c:forEach>
+<%--                <td><c:out value="${order.guestId}"/></td>--%>
                 <td><c:out value="${order.date}"/></td>
                 <td><c:out value="${order.guestNum}"/></td>
                 <td>

@@ -23,10 +23,11 @@ public class BranchDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(select_all_branch);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
+                int branchId = rs.getInt("branchId");
                 String phone = rs.getString("phone");
                 String name = rs.getString("name");
                 String add = rs.getString("address");
-                branchList.add(new Branch(phone, name, add));
+                branchList.add(new Branch(branchId,phone, name, add));
             }
         } catch (SQLException e) {
             e.printStackTrace();

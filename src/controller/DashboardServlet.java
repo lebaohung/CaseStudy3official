@@ -1,7 +1,11 @@
 package controller;
 
+import dao.BranchDAO;
+import dao.GuestDAO;
 import dao.GuestOrderDAO;
 import dao.IGuestOrderDAO;
+import model.Branch;
+import model.Guest;
 import model.Order;
 
 import javax.servlet.RequestDispatcher;
@@ -19,6 +23,8 @@ import java.util.List;
 @WebServlet(name = "DashboardServlet", urlPatterns = "/dashboard")
 public class DashboardServlet extends HttpServlet {
     IGuestOrderDAO guestOrderDAO = new GuestOrderDAO();
+    BranchDAO branchDAO = new BranchDAO();
+    GuestDAO guestDAO = new GuestDAO();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
@@ -67,6 +73,10 @@ public class DashboardServlet extends HttpServlet {
     public void showDashboard(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Order> orders = guestOrderDAO.selectAllOrders();
         request.setAttribute("listOrder", orders);
+        List<Branch> branchList = branchDAO.selectAllBranch();
+        request.setAttribute("branchList", branchList);
+        List<Guest> guestList = guestDAO.selectAllGuest();
+        request.setAttribute("guestList", guestList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("admin_interface.jsp");
         dispatcher.forward(request, response);
     }

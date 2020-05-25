@@ -13,6 +13,11 @@ public class Guest {
         this.guestPhone = guestPhone;
     }
 
+    public Guest(int guestID, String guestName) {
+        this.guestID = guestID;
+        this.guestName = guestName;
+    }
+
     public Guest(int guestID, String guestName, String guestPhone) {
         this.guestID = guestID;
         this.guestName = guestName;

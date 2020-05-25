@@ -1,6 +1,7 @@
 package model;
 
 public class Branch {
+    private int branchId;
     private String phone;
     private String name;
     private String add;
@@ -12,6 +13,21 @@ public class Branch {
         this.phone = phone;
         this.name = name;
         this.add = add;
+    }
+
+    public Branch(int branchId, String phone, String name, String add) {
+        this.branchId = branchId;
+        this.phone = phone;
+        this.name = name;
+        this.add = add;
+    }
+
+    public int getBranchId() {
+        return branchId;
+    }
+
+    public void setBranchId(int branchId) {
+        this.branchId = branchId;
     }
 
     public String getPhone() {
