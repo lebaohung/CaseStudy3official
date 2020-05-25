@@ -22,11 +22,13 @@ public class AdminServlet extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("before go to checkvalid");
         checkValid(request, response);
-
+        System.out.println("after go to checkvalid");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("before request action");
         String action = request.getParameter("action");
         if (action == null) {
             action = "";
@@ -36,14 +38,18 @@ public class AdminServlet extends HttpServlet {
                 showAdminLogin(request, response);
                 break;
         }
+        System.out.println("after check valid");
     }
 
     private void showAdminLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("before showadminlogin");
         RequestDispatcher dispatcher = request.getRequestDispatcher("signin.jsp");
         dispatcher.forward(request, response);
+        System.out.println("after showadminlogin");
     }
 
     private void checkValid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("before checkvalid");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         Admin admin = adminDAO.checkValid(username, password);
@@ -55,5 +61,6 @@ public class AdminServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("signin.jsp");
             dispatcher.forward(request, response);
         }
+        System.out.println("after checkvalid");
     }
 }
