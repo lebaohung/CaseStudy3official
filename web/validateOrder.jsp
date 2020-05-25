@@ -23,7 +23,7 @@ background-size: cover;
                              style=" position: absolute;"></a>
 </div>
 
-<div id="confirmContent" style="margin-top: 6%; border-radius: 40px;">
+<div id="confirmContent" style="margin-top: 6%; border-radius: 40px; width: 40%; margin-left: 30%">
 
     <h2 style="text-align: center;margin-left: 10%;margin-bottom: 5%;
     margin-top: 3%;width: 75% ; background-color: #fcac81;padding-left: 5%;
