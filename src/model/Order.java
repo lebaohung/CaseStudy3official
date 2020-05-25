@@ -15,6 +15,7 @@ public class Order {
 
 
     public Order(int orderId, int guestId, int branchId, String date, String timeId, int guestNum) {
+        super();
         this.orderId = orderId;
         this.guestId = guestId;
         this.branchId = branchId;
