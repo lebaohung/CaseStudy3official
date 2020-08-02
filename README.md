@@ -1,11 +1,9 @@
 # Pink Restaurant
 
-Developing a dinner preservation website in which clients
-are allowed to pre-order at the desired restaurant in pre-defined time
-slots. Besides, the system also updates the restaurants status for ad-
-mins. 
+Developing a dinner preservation website in which clients are allowed to pre-order at the desired restaurant in pre-defined time slots. Besides, the system also updates the restaurants status for admins. 
+
 ---
-#Tech Stack: 
+# Tech Stack: 
 - Java Sevlet
 - JSP
 - JavaScript
